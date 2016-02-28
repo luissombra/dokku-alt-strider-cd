@@ -21,6 +21,7 @@ RUN (rm -rf node_modules || exit 0) && npm install
 
 # Configure Strider-CD
 RUN mkdir -p /strider/builds && chown -R strider:strider /strider
+RUN mkdir -p /src/npm_modules && chown -R strider:strider /src
 ENV STRIDER_CLONE_DEST /strider/builds
 ENV SERVER_NAME https://strider.buscafeira.com/
 USER strider
